@@ -25,16 +25,17 @@ return(
    <div className= {classes.playerWrapper}> 
       
    { this.state.videoList.map((item =>{
-        console.log(item) 
-        if (item.id == this.props.props.match.params.videoId) {
+        // console.log(item) 
+        if (item.id == this.props.props.match.params.videoId) { 
+            console.log(item.isLiked ,123 ) ; 
             return( 
            
                 <div className= {classes.playerWrapper1}>
-                <iframe className ={classes.videoplayer} src={`https://player.vimeo.com/video/${item.vimeoId}`}  frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" __idm_id__="514841601"></iframe>
+                <iframe className ={classes.videoplayer} src={`https://player.vimeo.com/video/${item.vimeoId}`}  frameBorder="0" webkitallowfullscreen="" mozallowfullscreen="" allowFullscreen="" __idm_id__="514841601"></iframe>
                 <div>
                 <div className={classes.videoactions}>
                 <p><span className={classes.viewscount}>{item.views}</span> views</p>
-                <div className ={classes.Parent}>
+                <div className = {classes.Parent} >
                 <i class="far fa-heart" aria-hidden="true"></i>
                 <i class="far fa-comment-alt" aria-hidden="true"></i>
                 <i class="far fa-bookmark" aria-hidden="true"></i>
