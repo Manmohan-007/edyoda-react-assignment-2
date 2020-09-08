@@ -30,6 +30,18 @@ return(
         // console.log(item) 
         if (item.id == this.props.props.match.params.videoId) { 
             
+            var boolValue = item.isLiked; 
+            var SaveValue = item.isSaved ; 
+           
+            if( SaveValue == 'true') {
+                SaveValue = true ; 
+            } 
+            else (SaveValue = false)
+            if( boolValue == 'true') {
+                boolValue = true ; 
+            } 
+            else (boolValue = false)
+            console.log(typeof(item.isLiked) , "done") ;
             return( 
            
                 <div className= {classes.playerWrapper1}>
@@ -37,10 +49,11 @@ return(
                 <div>
                 <div className={classes.videoactions}>
                 <p><span className={classes.viewscount}>{item.views}</span> views</p>
-                <div className = {classes.Parent} >
-                <i class="far fa-heart" aria-hidden="true"></i>
+                <p>{item.isLiked}</p>
+                <div className = {classes.Parent}  >
+                <i class="far fa-heart" aria-hidden="true" style = {boolValue ? {backgroundColor : "red"} : null } ></i>
                 <i class="far fa-comment-alt" aria-hidden="true"></i>
-                <i class="far fa-bookmark" aria-hidden="true"></i>
+                <i class="far fa-bookmark" aria-hidden="true" style = {SaveValue ? {backgroundColor : "yellow"} : null }></i>
                 </div>
                 </div>
                 <h3 className={classes.videotitle}>{item.title}</h3>
