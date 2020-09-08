@@ -17,7 +17,9 @@ class LeftSide extends React.Component {
        
         .catch(err => {
             console.log('Call Failed!!');
-        });
+        }); 
+        
+    window.scrollTo(0, 0) 
     } 
 render(){
     
@@ -27,7 +29,7 @@ return(
    { this.state.videoList.map((item =>{
         // console.log(item) 
         if (item.id == this.props.props.match.params.videoId) { 
-            console.log(item.isLiked ,123 ) ; 
+            
             return( 
            
                 <div className= {classes.playerWrapper1}>

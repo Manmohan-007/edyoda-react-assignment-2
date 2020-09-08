@@ -16,12 +16,15 @@ state = {
 
 
 
+
+
 render(){
 
 
  return ( 
-    <BrowserRouter> 
-    <h1 className={classes.MainHeading}>The Video Player</h1>
+    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}> 
+    <h1 className={classes.MainHeading}>The Video Player</h1> 
+ 
     <Switch>
     
     <Route exact path ="/" render={(props)=>{return(
@@ -46,7 +49,8 @@ render(){
      }
 } /> 
     
-    </Switch>
+    </Switch> 
+   
     </BrowserRouter>
   )
 

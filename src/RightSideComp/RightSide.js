@@ -24,7 +24,11 @@ class RightSide extends React.Component {
        
         .catch(err => {
             console.log('Call Failed!!');
-        });
+
+        }); 
+        
+    window.scrollTo(0, 0) ;
+
     } 
 
 
