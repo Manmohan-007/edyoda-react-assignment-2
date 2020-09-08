@@ -49,7 +49,6 @@ return(
                 <div>
                 <div className={classes.videoactions}>
                 <p><span className={classes.viewscount}>{item.views}</span> views</p>
-                <p>{item.isLiked}</p>
                 <div className = {classes.Parent}  >
                 <i class="far fa-heart" aria-hidden="true" style = {boolValue ? {backgroundColor : "red"} : null } ></i>
                 <i class="far fa-comment-alt" aria-hidden="true"></i>
